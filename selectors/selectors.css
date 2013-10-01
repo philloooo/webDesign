@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import 'reset.css';
+
+/** {
+	color:gray;
+}
+
+*/
+
+/*a:visited{
+	color:blue;
+}*/
+/*link that is not visited*/
+a:link{
+	color:red;
+}
+
+
+/*ul adjacent to p*/
+p + ul {
+	color:#096;
+}
+p > ul {
+	color:#012;
+}
+/*any ul follows a div*/
+div ~ ul {
+	color:purple;
+}
+
+a[href*="google"] {
+	color:#afc;
+}
+/*start with google*/
+a[href^="http"] {
+	color:#afc;
+}
+/*end with .com*/
+a[href$=".com"] {
+	color:#afc;
+}
+
+input[type=radio]:checked + label{
+	font-weight: bold;
+}
+
+a:after {
+	content: "haa";
+}
+
+div p:not(.points){
+	color:#aed;
+}
+
+li:nth-child(2){
+	font-size: 200%;
+}
+li:nth-last-child(2){
+	font-size: 300%;
+}
+
+li:nth-of-type(odd){
+	color:#a02;
+}
+
+li: only-child{
+	color:black;
+}
+/*only one li in that container */
+li: only-of-type{
+	color:black;
+}

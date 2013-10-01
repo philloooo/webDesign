@@ -6029,6 +6029,7 @@ ul li img {
 .news-block {
   width: 50%;
   float: left;
+  padding-right: 1%;
 }
 div .news {
   color: #4b4e52;
@@ -6057,7 +6058,7 @@ div .date {
 
 }
 .categories-box {
-  width: 90%;
+  width: 94%;
   margin: auto;
 }
 .category {

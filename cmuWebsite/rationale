@@ -1,0 +1,6 @@
+My idea for the home page is to make it simple and clear, with all the important points but exclude trivial and distracting information.
+My laptop version contains 5 parts: Header, Nav bar, Top news, News and events, sessions, footer. The nav bar include information that I think people outside of cmu (rather than student) is most concerned about. While I group all information in the home page of cmu into 6 sessions. For example, 'people' session directs you to the page where you can get information for prospective students, current students, alumni, etc.
+
+The tablet version collapseis the Top news, News and events into one category, where news are just different slides.
+
+The phone version changes the nav bar to be in menu icon, and change the layout of sessions to 2*3.

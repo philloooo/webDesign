@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="./css/reset.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#itemD").click(function(){
+      $("#itemD").addClass("fadeout");
+      var t=setTimeout(function(){
+        $("#itemD").css("display","none");
+        $("#itemE").css({"display":"block"}).attr("class","initial")
+        // $("#itemE").css({"display": "block","opacity":0});
+      },500);
+      var s=setTimeout(function(){
+        $("#itemE").attr("class","fadein");
+       
+
+      },510);
+    })
+    $("#itemE").click(function(){
+      $("#itemE").attr('class','fadeout');
+    })
+  })
+</script>  
+<style>
+html, body {
+  height:100%;
+}
+.clearfix {
+  clear:both;
+}
+.fadeout{
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;  
+}
+.fadein {
+  opacity: 1;
+
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;  
+
+/*  -webkit-transition: opacity 2s linear, visibility 2s linear 2s;
+  -moz-transition: opacity 2s linear, visibility 2s linear 2s;
+  -o-transition: opacity 2s linear, visibility 2s linear 2s;
+  transition: opacity 2s linear, visibility 2s linear 2s;  
+*/
+}
+/* Use transition for hover focuse */
+#column_1 {
+	/*background:#063;*/
+  width:30%;
+  float:left;
+  height:100%;
+}
+/*ul li {
+  display:block;
+}*/
+ul li ul li {
+  opacity: 1;
+  padding: 2%;
+	background: #FCF;
+  transition: 1s;
+	-webkit-transition: 1s;
+}
+ul li ul {
+  padding-left: 3%;
+  /*display:none;*/
+}
+ul li:hover ul {
+  display:block;
+}
+ul li:hover ul li {
+  display:block;
+}
+ul li ul li:hover {
+	background:#F0F;
+  transition: 1s;
+	-webkit-transition: 1s ease-out;
+
+  /*margin:1%;*/
+  padding-left: 5%;
+  opacity: 1;
+
+  -webkit-transition: opacity 2s linear;
+  -moz-transition: opacity 2s linear;
+  -o-transition: opacity 2s linear;
+  transition: opacity 2s linear;  
+
+}
+#itemE {
+  display: none;
+
+}
+.initial{
+  opacity: 0;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+}
+#column_2 {
+  width:60%;
+  height:100%;
+  float:left;
+  background: #333;
+  position:relative;
+}
+
+
+</style>
+
+</head>	
+
+<body>
+<div id="column_1">
+	<ul>
+    	<li> item 1 </li>
+    	<li> item 2 </li>
+    	<li> item 3 </li>
+    	<li> item 4
+        	<ul>
+           	<li> item A </li>
+           	<li> item B </li>
+           	<li> item C </li>
+            <li id="itemD"> item D </li>
+           	<li id="itemE"> item E </li>
+            </ul> 
+		</li>
+	</ul>
+        
+
+</div>
+<div id="column_2">
+  <div id="content"></div>
+colume2
+</div>
+<div class="clearfix"></div>
+</body>
+</html>

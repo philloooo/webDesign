@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Untitled Document</title>
+		<link href="./css/reset.css" rel="stylesheet" type="text/css">
+		<style>
+		ul {
+			background: blue;
+		}
+		ul li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+		ul li ul  li{
+			display: none;
+		}
+		ul li:hover ul li {
+			display:block;
+		}
+		ul li ul {
+			position: absolute;
+			top:100%;
+		}
+		</style>
+	</head>	
+
+	<body>
+		<ul>
+			<li> face </li>
+			<li> 
+				<a href="#"> click </a>
+
+				<ul>
+					<li>fafa</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>

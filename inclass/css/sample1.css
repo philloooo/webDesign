@@ -1,0 +1,31 @@
+body div {
+	width: 200px;
+	height: 100px;
+	background: #F0F;
+	color:white;
+	position: relative;
+}
+body div p{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100px;
+	/*-webkit-transition:1s;*/
+}
+body div:hover p{
+	left:100%;
+	top:100%;
+	text-align: right;
+	-webkit-transform: translate(-100%,-100%);
+	color: #000;
+	-webkit-transition:all 1s ease-in-out;
+	transition:all 1s ease-in-out;
+}
+
+body div:hover {
+	width: 200px;
+	height: 200px;
+	background: #06F;
+	-webkit-transition:all 3s ease-in-out 0s;
+	/*property, time,timing-function delay*/
+}

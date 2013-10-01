@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+form {
+	width: 35%;
+	margin: auto;
+	margin-top:10%;
+}
+:invalid {
+	border:none;
+	box-shadow:0 0 3px rgb(108, 108, 214);
+	background-color: #F5FA7F;
+}
+input{
+	border: none;
+	box-shadow: 0 0 3px gray; 
+	display: block;
+	font-size: 1em;
+	border-radius: 5px;
+	width: 100%;
+	margin-bottom: 2%;
+	padding: 1%;
+}
+
+label {
+	font-size: 0.8em;
+}

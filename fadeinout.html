@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Untitled Document</title>
+		<script type="text/javascript" src="jquery.js"></script>
+		<link href="./css/reset.css" rel="stylesheet" type="text/css">
+		<style>
+		.visible,.hidden {
+		  overflow: hidden;
+		  /* This container should not have padding, borders, etc. */
+		}
+		.visible {
+		  visibility: visible;
+		  opacity: 1;
+		  transition: opacity 2s linear;
+		}
+		.hidden {
+		  visibility: hidden;
+		  opacity: 0;
+		  transition: visibility 0s 2s, opacity 2s linear;
+		}
+		.visible > div,
+		.hidden > div {
+		  /* Put any padding, border, min-height, etc. here. */
+		}
+		.hidden > div {
+		  margin-top: -10000px;
+		  transition: margin-top 0s 2s;
+		}
+		</style>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("#show").click(function(){
+				$("#sample").attr("class","visible");
+			})
+			$("#hide").click(function(){
+				$("#sample").attr("class","hidden");
+			})
+		})
+		
+		</script>
+	</head>	
+
+	<body>
+		<div id="sample" class="hidden">
+			<div>
+				hello
+			</div>
+		</div>
+		<div id="show">show</div>
+		<div id="hide">hide</div>
+	</body>
+</html>

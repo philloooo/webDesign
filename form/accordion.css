@@ -1,0 +1,96 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import 'reset.css';
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.accordion {
+	background: #eee;
+	border: 1px solid #999;
+	padding: 0 1em 24px 1em;
+	width: 500px;
+	margin: 2em auto;
+}
+
+.accordion h2 {
+	margin: 12px 0;
+}
+
+.accordion .section {
+	border-bottom: 1px solid #ccc;
+	padding: 0 1em;
+	background: #fff;
+}
+
+.accordion nav a {
+	display: block;
+	padding: 1em 0;
+	color: #F66;
+	text-decoration: none;
+}
+
+.accordion nav a:hover {
+	text-decoration: none;
+}
+
+.accordion nav + div {
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 0.3s ease-in-out;
+	-moz-transition: height 0.3s ease-in-out;
+	-o-transition: height 0.3s ease-in-out;
+	-ms-transition: height 0.3s ease-in-out;
+	transition: height 0.3s ease-in-out;
+}
+
+div.section {
+	position: relative;
+}
+
+nav a:nth-child(3){
+	display: none;
+	background: #F90;
+	color: white;
+	padding: 5px;
+	position: absolute;
+	top: 1em;
+	right: 0;
+}
+.accordion nav a {
+	font-weight: normal;
+}
+.accordion :target nav a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a.hidden {
+	display: none;
+}
+.accordion :target nav a.hidden {
+	display: inline-block;
+}
+.accordion :target nav h3 {
+	display: none;
+}
+
+.accordion :target nav>a {
+	font-size: 1.2em;
+	/*top:0;
+	position: absolute;*/
+}
+.accordion :target nav + div {
+	height: 100px;
+}
+
+.accordion .section.large:target nav + div {
+	overflow: auto;
+}
+
+
+
+
+
